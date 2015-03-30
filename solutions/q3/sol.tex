@@ -35,7 +35,7 @@ $0 \leq t \leq 14$.
     Thus the formula for the function we are looking for is
     \begin{center}
     \Huge{
-      $f: (\mathbb{R}_{\geq 0} \to \mathbb{R}_{\leq 14}) \mapsto (\mathbb{R}_{\geq 0} \to 10)$\\
+      $f: (\mathbb{R}_{\geq 0} \to \mathbb{R}_{\leq 14}) \mapsto (0, 10)$\\
       $f(t) = 10\sin\left(\frac{t\cdot\pi}{14}\right)$
     }.
     \end{center}
@@ -55,10 +55,53 @@ $0 \leq t \leq 14$.
     \item at $t=7$ the derivative must be zero, and;
     \item at just before $t=7$ (say $t=6$) the derivative must be positive, and;
     \item at just after $t=7$ (say $t=8$) the derivative must be negative
-  \end{enumerte}
+  \end{enumerate}
   \begin{align}
     \intertext{test derivative of zero at $t=7$}
       f(t) &= 10\sin\left(\frac{t\cdot\pi}{14}\right) \nonumber \\
-      f'(t) &= \
+    \intertext{apply chain rule, let}
+      u &= \frac{t \pi}{14} \nonumber
+    \intertext{st}
+      \frac{du}{dt} &= t \nonumber
+    \intertext{and}
+      \frac{d\sin(u)}{du} &= \cos(u) \\
+    \intertext{st}
+      \frac{d10\sin\left(\frac{t\cdot\pi}{14}\right)}{dt}
+        &= \frac{d10\sin(u)}{du}\cdot \frac{d\frac{t\pi}{14}}{dt} \\
+        &= \frac{d10\sin(u)}{du}\cdot \frac{\pi}{14} \\
+        &= 10\frac{d\sin(u)}{du}\cdot \frac{\pi}{14} \\
+        &= 10\cos(u)\cdot \frac{\pi}{14} \\
+        &= \frac{5\pi}{7}\cos\left(\frac{t \pi}{14}\right) \label{eq:q2deriv}
+    \intertext{evaluate at $t=7$}
+      \frac{5\pi}{7}\cos\left(\frac{7 \pi}{14}\right) &= 0
+    \intertext{evaluate at $t=6$}
+      \frac{5\pi}{7}\cos\left(\frac{6 \pi}{14}\right) &\approx 0.499... \\
+      & \quad \text{positive}
+    \intertext{evaluate at $t=6$}
+      \frac{5\pi}{7}\cos\left(\frac{8 \pi}{14}\right) &\approx -0.499... \\
+      & \quad \text{negative}
   \end{align}
+  $\therefore$ maximum at $t=7$ hours confirmed by increasing and decreasing
+  gradients approaching $t=7$. The amount of power produced is 10 watts.
+  \item A function, $g(t)$ representing the power output (P) of a panel can be
+  constructed similarly to $f(t)$, except it will be compressed. Hours 0800 to
+  1700 mean $k$ must map the range $0 \leq t \leq 9$ onto $0 \leq \theta \pi$
+
+  \begin{align}
+    g(t) &= 10\sin(k \cdot t) | 0 \leq t \leq 9 \\
+    \intertext{where k is a value mapping the value of $t (0-9) \to \theta
+    (0$ to $\pi)$}
+    k &= \frac{\pi}{9}
+    \intertext{such that at 8am}
+    f(0) &= 10\sin(k \cdot 0) = 10\sin(0) = 0
+    \intertext{and at 10pm (9 hours later)}
+    f(9) &= 10\sin(k \cdot 9) = 10\sin(\pi) = 0
+  \end{align}
+  Thus the formula for the function we are looking for is
+  \begin{center}
+  \Huge{
+    $g: (\mathbb{R}_{\geq 0} \to \mathbb{R}_{\leq 9}) \mapsto (0,10)$\\
+    $g(t) = 10\sin\left(\frac{t\cdot\pi}{9}\right)$
+  }.
+  \end{center}
 \end{enumerate}
