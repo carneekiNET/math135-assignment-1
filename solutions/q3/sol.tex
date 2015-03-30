@@ -1,3 +1,64 @@
 \chapter{Question 3}
-Find the exact values of $\sin(\frac{7\pi}{12})$ and $\cos(\frac{7\pi}{12})$.
-Do not use a calculator, and explain your reasoning carefully.
+\section{Questions}
+The power output, $P$, of a solar panel varies with the position of the sun. Let
+$P(\theta) = 10\sin(\theta)$ watts, where $\theta$ is the angle between the
+sun's rays and the panel, $0 \leq \theta \leq \pi$. On a typical summer day in
+Ann Arbor, Michigan, the sun rises at 6am and sets at 8pm and the angle is
+$\theta(t) = \pi\frac{t}{14}$ where $t$ is time in hours since 6am and
+$0 \leq t \leq 14$.
+
+\begin{enumerate}
+  \item Write a formula for a function, $f(t)$, giving the power output of the
+  solar panel (in watts), $t$ hours after 6am on a typical summer day in Ann
+  Arbor.
+  \item Graph the function $f(t)$ in the previous part for $0 \leq t \leq 14$.
+  \item At what time is the power output greatest? What is the power output at
+  this time?
+  \item On a typical winter day in Ann Arbor, the sun rises at 8am and sets at
+  5pm. Write a formula for a function, $g(t)$, giving the power output of the
+  solar panel (in watts), $t$ hours after 8am on a typical winter day.
+\end{enumerate}
+
+\section{Solutions}
+\begin{enumerate}
+  \item We can write the function $P(\theta)$ in the following form
+    \begin{align}
+      f(t) &= 10\sin(k \cdot t) | 0 \leq t \leq 14 \\
+      \intertext{where k is a value mapping the value of $t (0-14) \to \theta
+      (0$ to $\pi)$}
+      k &= \frac{\pi}{14}
+      \intertext{such that at 6am}
+      f(0) &= 10\sin(k \cdot 0) = 10\sin(0) = 0
+      \intertext{and at 10pm (14 hours later)}
+      f(14) &= 10\sin(k \cdot 14) = 10\sin(\pi) = 0
+    \end{align}
+    Thus the formula for the function we are looking for is
+    \begin{center}
+    \Huge{
+      $f: (\mathbb{R}_{\geq 0} \to \mathbb{R}_{\leq 14}) \mapsto (\mathbb{R}_{\geq 0} \to 10)$\\
+      $f(t) = 10\sin\left(\frac{t\cdot\pi}{14}\right)$
+    }.
+    \end{center}
+  \item Graph of $f$ contained in figure \ref{fig:q3plot} on page
+  \pageref{fig:q3plot}.
+  \begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{solutions/q3/q3plot.png}
+  \caption{Plot of $f(t) = 10\sin\left(\frac{t\cdot\pi}{14}\right)$ from 0 to 14}
+  \label{fig:q3plot}
+  \end{figure}
+  \item Power output will be at maximum when we are at a local maximum.
+  Intuitively, this is 7 hours after 07:00, at 15:00 or 3pm. This can be
+  confirmed with some differentiation of the function. To test for local maximum
+  the following three conditions must be met:
+  \begin{enumerate}
+    \item at $t=7$ the derivative must be zero, and;
+    \item at just before $t=7$ (say $t=6$) the derivative must be positive, and;
+    \item at just after $t=7$ (say $t=8$) the derivative must be negative
+  \end{enumerte}
+  \begin{align}
+    \intertext{test derivative of zero at $t=7$}
+      f(t) &= 10\sin\left(\frac{t\cdot\pi}{14}\right) \nonumber \\
+      f'(t) &= \
+  \end{align}
+\end{enumerate}
