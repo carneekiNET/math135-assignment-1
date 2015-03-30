@@ -1,0 +1,97 @@
+\chapter{Question 1}
+Find the exact values of $\sin\left(\frac{7\pi}{12}\right)$ and
+$\cos\left(\frac{7\pi}{12}\right)$. Do not use a calculator, and explain your
+reasoning carefully.
+
+$\frac{7\pi}{12}$ is a fraction, in radians it is close to the 12 o'clock
+position on the unit circle. We know this because $\frac{\pi}{2}$ radians
+\textbf{is} the 12 o'clock position. Because $\frac{7}{12}$ is a little larger
+than $\frac{1}{2}$, we also know the position will be just past 12, closer to 11
+o'clock (fig \ref{fig:q1sums}).
+
+\newpage
+
+\begin{figure}[!h]
+\centering
+\begin{tikzpicture}[scale=3,cap=round,>=latex]
+  % draw the coordinates
+  \draw[dashed,->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+  \draw[dashed,->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+
+  % draw the unit circle
+  \draw[thick] (0cm,0cm) circle(1cm);
+
+  \draw[neekiRed] (0cm,0cm) -- (60:1cm);
+  \filldraw[neekiRed] (60:1cm) circle(0.4pt);
+  \draw (60:0.6cm) node[fill=white] {$\frac{\pi}{3}$};
+
+  \draw[neekiBlue] (0cm,0cm) -- (45:1cm);
+  \filldraw[neekiBlue] (45:1cm) circle(0.4pt);
+  \draw (45:0.6cm) node[fill=white] {$\frac{\pi}{4}$};
+
+  \draw[black] (0cm,0cm) -- (105:1cm);
+  \filldraw[black] (105:1cm) circle(0.4pt);
+  \draw (105:0.6cm) node[fill=white] {$\frac{7\pi}{12}=\frac{\pi}{3}+\frac{\pi}{4}$};
+
+%  \foreach \x in {0,30,...,360} {
+%    % lines from center to point
+%    \draw[gray] (0cm,0cm) -- (\x:1cm);
+%    % dots at each point
+%    \filldraw[black] (\x:1cm) circle(0.4pt);
+%    % draw each angle in degrees
+%    \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+%  }
+
+  % draw the horizontal and vertical coordinates
+  % the placement is better this way
+  \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+  (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+  (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+  (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+\end{tikzpicture}
+\caption{$\frac{7\pi}{12}$ in relation to $\frac{\pi}{2}$}
+\label{fig:q1sums}
+\end{figure}
+
+\noindent $\frac{7\pi}{12}$ is an angle that we do not have identities for. We
+\textbf{do} have identities for $\frac{\pi}{3}$ and $\frac{\pi}{4}$, and that:
+\begin{align}
+  \frac{7\pi}{12} &= \frac{\pi}{3} + \frac{\pi}{4} \quad \text{such that} \\
+  \sin\left(\frac{7\pi}{12}\right) &= \sin\left(\frac{\pi}{3} + \frac{\pi}{4}\right)
+  \intertext{and}
+  \cos\left(\frac{7\pi}{12}\right) &= \cos\left(\frac{\pi}{3} + \frac{\pi}{4}\right)
+  \intertext{We have identities for $\sin\left(\frac{\pi}{3}\right)$, $\sin\left(\frac{\pi}{4}\right)$,
+$\cos\left(\frac{\pi}{3}\right)$ and $\cos\left(\frac{\pi}{4}\right)$, and can
+  apply sine and cosine addition rules:}
+  \sin(\alpha \pm \beta) &= \sin(\alpha)\cos(\beta) \pm \sin(\beta)\cos(\alpha) \nonumber \\
+  \cos(\alpha \pm \beta) &= \cos(\alpha)\cos(\beta) \mp \sin(\alpha)\sin(\beta) \nonumber
+  \intertext{Let:}
+  \alpha &= \frac{\pi}{3} \nonumber \\
+  \beta  &= \frac{\pi}{4} \nonumber \\
+  \sin\left(\frac{\pi}{3} + \frac{\pi}{4}\right)
+    &= \sin\left(\frac{\pi}{3}\right)\cos\left(\frac{\pi}{4}\right) +
+       \sin\left(\frac{\pi}{4}\right)\cos\left(\frac{\pi}{3}\right) \\
+  \intertext{substitute our identity values:}
+    \sin \alpha &= \sin\left(\frac{\pi}{3}\right) = \frac{\sqrt{3}}{2} \nonumber \\
+    \sin \beta  &= \sin\left(\frac{\pi}{4}\right) = \frac{\sqrt{2}}{2} \nonumber \\
+    \cos \alpha &= \cos\left(\frac{\pi}{3}\right) = \frac{1}{2} \nonumber \\
+    \cos \beta  &= \cos\left(\frac{\pi}{4}\right) = \frac{\sqrt{2}}{2} \nonumber \\
+  \sin\left(\frac{7\pi}{12}\right) &= \sin\left(\frac{\pi}{3} + \frac{\pi}{4}\right)
+    = \frac{\sqrt{3}}{2}\cdot\frac{\sqrt{2}}{2} +
+      \frac{\sqrt{2}}{2}\cdot\frac{1}{2} \\
+    &= \frac{\sqrt{3}}{2}\cdot\frac{1}{\sqrt{2}} +
+    \frac{1}{\sqrt{2}}\cdot\frac{1}{2} \\
+    &= \frac{\sqrt{3}}{2\sqrt{2}} + \frac{1}{2\sqrt{2}} \\
+    &= \frac{\sqrt{3} +1}{2\sqrt{2}} \\
+  \cos\left(\frac{7\pi}{12}\right) &= \cos\left(\frac{\pi}{3}\right) \cdot \cos\left(\frac{\pi}{4}\right)
+    - \sin\left(\frac{\pi}{3}\right) \cdot \sin\left(\frac{\pi}{4}\right) \\
+    &= \frac{1}{2} \cdot \frac{\sqrt{2}}{2} - \frac{\sqrt{3}}{2} \cdot \frac{\sqrt{2}}{2} \\
+    &= \frac{1}{2} \cdot \frac{1}{\sqrt{2}} - \frac{\sqrt{3}}{2} \cdot \frac{1}{\sqrt{2}} \\
+    &= \frac{1 - \sqrt{3}}{2\sqrt{2}}
+\end{align}
+
+\noindent Finally, we need to consider the quadrant. $2^{nd}$ quadrant means
+sine is positive and cosine is negative. Hence: \\
+\\
+\Large{$\sin\left(\frac{7\pi}{12}\right) = \frac{\sqrt{3} +1}{2\sqrt{2}}$ } and \\
+\Large{$\cos\left(\frac{7\pi}{12}\right) = - \frac{1 - \sqrt{3}}{2\sqrt{2}}$} \qedbitches \\
